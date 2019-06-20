@@ -58,7 +58,7 @@ def main():
             dictionary[sName[i].text] = [x.text for x in driver.find_elements_by_css_selector('#ref' + str(theRange[i]) + '> ul > li')]
         print('\nNext step, Yelp.')
         #YELP
-        url = 'https://www.yelp.com/search?find_desc=Massage%20Therapy&find_loc=' #Change Veterinarians to what ever you're looking for
+        url = 'https://www.yelp.com/search?find_desc=Massage%20Therapy&find_loc=' #Change Massage Therapist to what ever you're looking for
 
         #Lists holding companies data
         company = []
@@ -71,7 +71,7 @@ def main():
         for x,y in dictionary.items():
             print(counterReach)
             for v in y:
-                yelpURL = url + x.lower() + '%2C%20' + v.lower() + '&cflt=massage_therapy'# If you're not using this for vets remove the filter '&cflt=vet' or add your own filter
+                yelpURL = url + x.lower() + '%2C%20' + v.lower() + '&cflt=massage_therapy'# If you're not using this for massage_therapy remove the filter '&cflt=vet' or add your own filter
                 #User output
                 print('#========================')
                 print('# STATE: ' + x)
